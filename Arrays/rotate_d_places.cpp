@@ -3,8 +3,8 @@
 using namespace std;
 void rotate_d_places(int n, int arr[], int d){
     int temp[n];
-    d = d%n;
-    d = n-d;
+    d = d%n;// This is done to get within the range
+    d = n-d; //This is done to get the left rotation count equivalent to the right ones
     for(int i=0; i<d; i++){
         temp[i] = arr[i];
     }
