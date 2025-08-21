@@ -13,20 +13,27 @@ vector<int>optimal_union(vector<int>&arr, vector<int>&arr1){
             }
             i++;
         }
-        else{
+        else if(arr[i] > arr1[j]){
             if(res.empty() || res.back() != arr1[j]){
                 res.push_back(arr1[j]);
             }
             j++;
         }
+        else{
+            if(res.empty() || res.back() != arr[i]){
+                res.push_back(arr[i]);
+            }
+            i++;
+            j++;
+        }
     }
-    if(i<s1){
+    while(i<s1){
         if(res.empty() || res.back()!= arr[i]){
             res.push_back(arr[i]);
         }
         i++;
     }
-    if(j<s2){
+    while(j<s2){
         if(res.empty() || res.back()!=arr1[j]){
             res.push_back(arr1[j]);
         }
