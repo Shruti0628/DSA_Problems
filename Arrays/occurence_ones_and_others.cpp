@@ -1,0 +1,36 @@
+//Find the no that appears once, while all others appear twice
+
+#include<bits/stdc++.h>
+using namespace std;
+
+//Using brute-force method
+int occurence_ones_and_others(int arr[], int n){
+    int count;
+    for(int i = 0; i < n; i++){
+        count = 0;
+        for(int j = 0; j < n; j++){
+            if(i != j && arr[i] == arr[j]){
+                count++;
+                break;
+        }
+    }
+    if(count == 0){
+        return arr[i];
+    }
+}
+return -1;
+}
+int main(){
+    int n;
+    cout<<"enter the size of an array:";
+    cin>>n;
+    int arr[n];
+    cout<<"enter the elements of an array:";
+    for(int i=0; i<n; i++){
+        cin>>arr[i];
+    }
+    cout<<"Element that appears once while all others appear twice is:";
+    int res = occurence_ones_and_others(arr,n);
+    cout<<res;
+    return 0;
+}
