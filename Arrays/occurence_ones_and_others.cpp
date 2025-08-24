@@ -9,7 +9,7 @@ int occurence_ones_and_others(int arr[], int n){
     for(int i = 0; i < n; i++){
         //Reset count for each elements
         count = 0;
-        //Put a loop to check if the element is present again, and also flag it for its first occurence.
+        // Loop to check if arr[i] appears elsewhere in the array (excluding itself) //Put a loop to check if the element is present again and traversing the whole loop, and also flag it for its first occurence.
         for(int j = 0; j < n; j++){
             if(i != j && arr[i] == arr[j]){
                 count++;
