@@ -1,6 +1,7 @@
 //Longest Subarray with Sum K
 #include<bits/stdc++.h>
 using namespace std;
+//Brute Force Approach O(n^3)
 int longest_subarray(int arr[], int n, int k){
     int len = 0;
     for(int i = 0; i < n; i++){
