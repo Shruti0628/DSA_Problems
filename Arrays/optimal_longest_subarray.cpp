@@ -11,9 +11,11 @@ int longest_subarray(int arr[], int n, int k){
             sum -= arr[left];
             left++;
         }
+        //Check out for length when sum == k
         if ( sum == k){
             len = max(len, right - left + 1);
         }
+        //Keep expanding the window to the right
         right++;
         if(right < n ){
             sum += arr[right];
